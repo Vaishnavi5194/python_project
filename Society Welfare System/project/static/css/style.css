@@ -1,0 +1,201 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+body {
+  /*background-color: #e6e6e6;*/
+  background:url(img/bg.jpg) no-repeat;	
+  background-size:cover;
+  font-size: 100%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+.contactFrom div, 
+.contactFrom textarea, 
+.contactFrom input {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.contactFrom {
+  font-family: 'Lato', sans-serif;
+  max-width: 510px;
+  min-width: 324px;
+  margin:0 auto;
+  background-color: #fff;
+}
+
+.contactFrom .row {
+  width: 100%;
+  margin: 0 0 1em 0;
+  padding: 0 2.5em;
+}
+.contactFrom .row.header {
+  background:url(img/19-fire-low-poly-texture.jpg) no-repeat;
+  background-size:cover;
+  padding: 1.5em 2.5em;
+  border-bottom: 1px solid #ccc;
+  color: #49334a;
+  text-align:center;
+}
+.contactFrom .row.body {
+  padding: .5em 2.5em 1em;
+}
+
+.contactFrom .pull-right {
+  float: right;
+}
+
+.contactFrom h2 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 2.8125em;
+  border-bottom: solid 1px #49334a;
+  margin: 0 0 0.1em 0;
+  padding: 0 0 0.4em 0;
+}
+
+.contactFrom h3 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 1.25em;
+  margin: 1em 0 0.4em 0;
+  color:#fff;
+}
+
+.contactFrom form {
+  max-width: 100%;
+  display: block;
+}
+.contactFrom form ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.contactFrom form ul li {
+  margin: 0 0 0.25em 0;
+  clear: both;
+  display: inline-block;
+  width: 100%;
+}
+.contactFrom form ul li:last-child {
+  margin: 0;
+}
+.contactFrom form ul li p {
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+.contactFrom form ul li p.full{
+	width:100%;	
+}
+.contactFrom form ul li p.right {
+  float: right;
+}
+.contactFrom form ul li .divider {
+  margin: 0.5em 0 0.5em 0;
+  border: 0;
+  height: 1px;
+  width: 100%;
+  display: block;
+  background-color: #4f6fad;
+  background-image: linear-gradient(to right, #ee9cb4, #4f6fad);
+}
+.contactFrom form ul li .req {
+  color: #ee9cb4;
+}
+
+.contactFrom form label {
+  display: block;
+  margin: 0 0 0.5em 0;
+  color: #49334a;
+  font-size: 1em;
+  text-transform:capitalize;
+}
+.contactFrom form input {
+  margin: 0 0 0.5em 0;
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  color: #555;
+  font-size: 1em;
+}
+.contactFrom form ul li p.full input {
+	width:100%;
+}
+.contactFrom form textarea {
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  width: 100%;
+  color: #555;
+}
+.contactFrom form small {
+  color: #49334a;
+  margin: 0 0 0 0.5em;
+}
+
+.contactFrom .btn {
+  font-size: 1.0625em;
+  display: inline-block;
+  padding: 0.74em 1.5em;
+  margin: 1.5em 0 0;
+  color: #fff;
+  border-width: 0 0 0 0;
+  border-bottom: 5px solid;
+  border-radius:5px;
+  text-transform: uppercase;
+  background-color: #b3b3b3;
+  border-bottom-color: #8c8c8c;
+  font-weight: 400;
+  cursor:pointer;
+}
+.contactFrom .btn:hover {
+  background-color: #bfbfbf;
+}
+.contactFrom .btn.btn-submit {
+  background-color: #8b608d;
+  border-bottom-color: #5b345d;
+}
+.contactFrom .btn.btn-submit:hover {
+  background-color: #49334a;
+  border-bottom-color: #5b345d;
+}
+
+
+
+@media only screen and (max-width: 480px) {
+  .contactFrom .pull-right {
+    float: none;
+  }
+
+  .contactFrom input {
+    width: 100%;
+  }
+
+  .contactFrom label {
+    width: 100%;
+    display: inline-block;
+    float: left;
+    clear: both;
+  }
+
+  .contactFrom li, p {
+    width: 100%;
+  }
+
+  .contactFrom input.btn {
+    margin: 1.5em 0 0.5em;
+  }
+
+  .contactFrom h1 {
+    font-size: 2.25em;
+  }
+
+  .contactFrom h3 {
+    font-size: 1.125em;
+  }
+
+  .contactFrom li small {
+    display: none;
+  }
+}
