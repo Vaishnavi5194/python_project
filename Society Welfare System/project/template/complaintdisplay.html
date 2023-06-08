@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+{% extends 'base.html' %}
+{% block body %}
+{{member}}
+
+<form method="post">
+    {% csrf_token %}
+    <div class="topnav">
+        <a href="{% url 'webpage' %}">Home</a>
+        <a href="adhome">Department</a>
+        <a class="active" href="complaintview">Complaints</a>
+        <a href="deplogout">Logout</a>
+        <a href="about">About</a>
+        <a href="contact">Contact</a>
+        <a href="support">Support</a>
+        <a href="terms">Terms and Conditions</a>
+    </div>
+    <br><br>
+
+    <div style="padding-left:16px">
+        <center>
+            <br><br>
+            <h1> <u>Complaints</u> </h1>
+
+            {% if complaints %}
+                <ul>
+                    {% for complaint in complaints %}
+                        <p>Username: {{ complaint.username }}</p>
+                        <p>Phone: {{ complaint.phone }}</p>
+                        <p>Address: {{ complaint.address }}</p>
+                        <p>Department: {{ complaint.department }}</p>
+
+                        {% if complaint.file %}
+                        <img src="{{ complaint.file.url }}" height="200px" width="400px" />
+                         <p>Issue: {{ complaint.issue }}</p>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No complaints found.</p>
+            {% endif %}
+        </center>
+    </div>
+</form>
+{% endblock %}
+</body>
+</html>
